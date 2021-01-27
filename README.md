@@ -1,6 +1,10 @@
 # Getting Started
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Install npm and NodeJS here [NodeJS] (https://nodejs.org/en/download/).
+
+2. Check below for the list of CLI commands available.
+
+Note: This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
