@@ -1,0 +1,20 @@
+$xsBreakPoint: '361px';
+$smBreakPoint: '600px';
+$mdBreakPoint: '960px';
+$lgBreakPoint: '1280px';
+$xlBreakPoint: '1920px';
+
+$grid-breakpoints: (
+  xxs: 0,
+  // Extremely small screen / phone
+  xs: $xsBreakPoint,
+  // Extra small screen / phone
+  sm: $smBreakPoint,
+  // Small screen / phone
+  md: $mdBreakPoint,
+  // Medium screen / tablet
+  lg: $lgBreakPoint,
+  // Large screen / desktop
+  xl: $xlBreakPoint
+  // Extra large screen / wide desktop
+)

@@ -1,15 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
+import createStore from './store/create_store';
+import AppContainer from './containers/app_container';
 import reportWebVitals from './reportWebVitals';
+import './index.css';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+// ========================================================
+// Render Setup
+// ========================================================
+
+const initialState = {}
+
+const store = createStore(initialState), MOUNT_NODE = document.getElementById('root')
+
+let render = () => {
+  ReactDOM.render(
+    <React.StrictMode>
+      <Provider store={store}>
+        <BrowserRouter>
+          <AppContainer />
+        </BrowserRouter>
+      </Provider>
+    </React.StrictMode>,
+    MOUNT_NODE
+  )
+}
+
+// render the application
+render()
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

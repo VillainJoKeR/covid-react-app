@@ -1,0 +1,49 @@
+@import '../../styles/base.module.scss';
+
+// define colors here
+$textColor: #fff;
+$buttonBorderColor: #2ea7a2;
+$buttonBgColor: #fff;
+
+// define all local css classes here
+:local {
+	.homeBox {
+		background: url('../../assets/images/home-bg.png') no-repeat center/cover;
+		height: 100vh;
+
+		&__gridContainer {
+			flex-direction: column-reverse;
+			
+			@media(min-width: $smBreakPoint) {
+				flex-direction: row;
+			}
+		}
+	}
+
+	.coronaBox {
+		background: transparent url('../../assets/images/corona.png') no-repeat center/contain;
+		height: 360px;
+		width: 360px;
+		max-width: 560px;
+
+		@media(min-width: $smBreakPoint) {
+			height: 100vh;
+			width: auto;
+			margin-top: 0;
+		}
+	}
+
+	.typography {
+		color: $textColor;
+	}
+
+	.moreInfoButton {
+		border: 2px solid $buttonBorderColor;
+		border-radius: 48px;
+		background: $buttonBgColor;
+		padding: 8px 16px;
+		margin-top: 16px;
+	}
+}
+
+// define all global css classes here
