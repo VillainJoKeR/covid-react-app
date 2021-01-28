@@ -1,11 +1,12 @@
 import React, { Suspense, lazy } from 'react'
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch } from 'react-router-dom';
+import BackDrop from './components/home';
 
 /* 
 * Define all Lazy loaded components
 */
-const Home = lazy(() => import('./components/home'))
-const Resources = lazy(() => import('./components/resources'))
+const Home = lazy(() => import('./components/home'));
+const Resources = lazy(() => import('./components/resources'));
 
 /*
 * Render a route with potential sub routes
@@ -23,7 +24,7 @@ const RouteWithSubRoutes = (route) => {
 
 export const RenderRoutes = ({ routes }) => {
 	return (
-			<Suspense fallback={<div>Loading...</div>}>
+			<Suspense fallback={BackDrop}>
 				<Switch>
 					{routes.map((route, i) => {
 						return <RouteWithSubRoutes key={route.key} {...route} />
@@ -36,14 +37,14 @@ export const RenderRoutes = ({ routes }) => {
 
 const ROUTES = [
 	{ 
-		path: "/", 
-		key: "HOME", 
+		path: '/', 
+		key: 'HOME', 
 		exact: true, 
 		component: Home
 	},
 	{
-		path: "/resources",
-		key: "APP_ROOT",
+		path: '/resources',
+		key: 'APP_ROOT',
 		exact: true,
 		component: Resources,
 	},

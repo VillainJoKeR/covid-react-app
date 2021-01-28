@@ -25,7 +25,9 @@ const Home = () => (
               This is a contagious disease caused by severe acute respiratory syndrome coronavirus 2. The first case was identified in Wuhan, China, in December 2019. It has since spread worldwide, leading to an ongoing pandemic.
             </Typography>
 
-            <Button className={styles.moreInfoButton} variant='outlined' href='https://en.wikipedia.org/wiki/Coronavirus_disease_2019' target='_blank'>
+            <Button classes={{
+              root: styles.moreInfoButton
+            }} variant='outlined' href='https://en.wikipedia.org/wiki/Coronavirus_disease_2019' target='_blank'>
               More Details
             </Button>
           </Box>
