@@ -5,6 +5,7 @@ import { Route, Switch } from "react-router-dom";
 * Define all Lazy loaded components
 */
 const Home = lazy(() => import('./components/home'))
+const Resources = lazy(() => import('./components/resources'))
 
 /*
 * Render a route with potential sub routes
@@ -44,7 +45,7 @@ const ROUTES = [
 		path: "/resources",
 		key: "APP_ROOT",
 		exact: true,
-		component: () => <h1>App Index</h1>,
+		component: Resources,
 	},
 ]
 

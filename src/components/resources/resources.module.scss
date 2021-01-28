@@ -1,0 +1,30 @@
+@import '../../styles/base.module.scss';
+
+// define colors here
+$textColor: #fff;
+
+// define all local css classes here
+:local {
+	.resourcesBox {
+
+	}
+
+	.typography {
+		color: $textColor;
+	}
+
+	.card {
+		max-width: 360px;
+		margin: 32px auto;
+		
+		&__media {
+			height: 240px;
+		}
+
+		&__description {
+			height: 100px;
+		}
+	}
+}
+
+// define all global css classes here
