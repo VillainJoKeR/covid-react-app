@@ -1,0 +1,22 @@
+@import '../../styles/base.module.scss';
+
+// define colors here
+$textColor: #fff;
+$paperBgColor: #5fd0cd;
+
+// define all local css classes here
+:local {
+	.container {
+		width: 100%;
+		max-width: 600px;
+		margin: auto;
+
+		&__paper {
+			color: $textColor;
+			background: $paperBgColor;
+			padding: 32px;
+		}
+	}
+}
+
+// define all global css classes here

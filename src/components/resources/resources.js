@@ -15,7 +15,7 @@ import GoogleImage2 from '../../assets/images/google-image-2.jpg';
 import GoogleImage3 from '../../assets/images/google-image-3.jpg';
 import styles from './resources.module.scss';
 
-const Home = () => (
+const Resources = () => (
   <Container maxWidth={false}>
     <Box className={styles.resourcesBox} pt={8} pb={8}>
       <Grid container justify='space-between' alignItems='center' spacing={4}>
@@ -29,7 +29,7 @@ const Home = () => (
               />
               
               <CardContent>
-                <Typography gutterBottom variant='h6' component='h2'>
+                <Typography gutterBottom variant='h6' component='h2' className={styles.card__header}>
                   Google Health Studies App
                 </Typography>
                 
@@ -40,7 +40,7 @@ const Home = () => (
             </CardActionArea>
 
             <CardActions>
-              <Button size='small' color='primary' href='https://play.google.com/store/apps/details?id=com.google.android.apps.health.research.studies' target='_blank'>
+              <Button className={styles.card__linkButton} size='small' color='primary' href='https://play.google.com/store/apps/details?id=com.google.android.apps.health.research.studies' target='_blank'>
                 Learn More
               </Button>
             </CardActions>
@@ -57,7 +57,7 @@ const Home = () => (
               />
               
               <CardContent>
-                <Typography gutterBottom variant='h6' component='h2'>
+                <Typography gutterBottom variant='h6' component='h2' className={styles.card__header}>
                   Exposure Notifications System
                 </Typography>
                 
@@ -68,7 +68,7 @@ const Home = () => (
             </CardActionArea>
 
             <CardActions>
-              <Button size='small' color='primary' href='https://www.google.com/covid19/exposurenotifications/' target='_blank'>
+              <Button className={styles.card__linkButton} size='small' color='primary' href='https://www.google.com/covid19/exposurenotifications/' target='_blank'>
                 Learn More
               </Button>
             </CardActions>
@@ -85,7 +85,7 @@ const Home = () => (
               />
               
               <CardContent>
-                <Typography gutterBottom variant='h6' component='h2'>
+                <Typography gutterBottom variant='h6' component='h2' className={styles.card__header}>
                   Find Job Oppurtunities
                 </Typography>
                 
@@ -96,7 +96,7 @@ const Home = () => (
             </CardActionArea>
 
             <CardActions>
-              <Button size='small' color='primary' href='https://www.google.com/search?q=remote+jobs&ibp=htl;jobs&rciv=jb#fpstate=tldetail&htivrt=jobs&htidocid=fNgPrd4ZWJCY6-tLAAAAAA%3D%3D' target='_blank'>
+              <Button className={styles.card__linkButton} size='small' href='https://www.google.com/search?q=remote+jobs&ibp=htl;jobs&rciv=jb#fpstate=tldetail&htivrt=jobs&htidocid=fNgPrd4ZWJCY6-tLAAAAAA%3D%3D' target='_blank'>
                 Learn More
               </Button>
             </CardActions>
@@ -107,4 +107,4 @@ const Home = () => (
   </Container>
 )
 
-export default Home
+export default Resources

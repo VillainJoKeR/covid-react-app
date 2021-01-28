@@ -7,6 +7,7 @@ import BackDrop from './components/home';
 */
 const Home = lazy(() => import('./components/home'));
 const Resources = lazy(() => import('./components/resources'));
+const Contact = lazy(() => import('./components/contact'));
 
 /*
 * Render a route with potential sub routes
@@ -24,7 +25,7 @@ const RouteWithSubRoutes = (route) => {
 
 export const RenderRoutes = ({ routes }) => {
 	return (
-			<Suspense fallback={BackDrop}>
+			<Suspense fallback={BackDrop()}>
 				<Switch>
 					{routes.map((route, i) => {
 						return <RouteWithSubRoutes key={route.key} {...route} />
@@ -44,10 +45,16 @@ const ROUTES = [
 	},
 	{
 		path: '/resources',
-		key: 'APP_ROOT',
+		key: 'RESOURCES',
 		exact: true,
-		component: Resources,
+		component: Resources
 	},
+	{
+		path: '/contact',
+		key: 'CONTACTS',
+		exact: true,
+		component: Contact
+	}
 ]
 
 export default ROUTES

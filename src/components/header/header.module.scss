@@ -1,17 +1,17 @@
 @import '../../styles/base.module.scss';
 
 // define colors here
-$white: #fff;
+$textcolor: #254445;
 
 // define all local css classes here
 :local {
 	.header {
 		background: transparent;
-		color: $white;
+		color: $textcolor;
 	}
 
 	.homeIcon {
-		color: $white;
+		color: $textcolor;
 	}
 
 	.headerListContainer {
@@ -21,7 +21,7 @@ $white: #fff;
 
 	.headerItem {
 		margin-left: 32px;
-		color: $white;
+		color: $textcolor;
 	}
 
 	.link {

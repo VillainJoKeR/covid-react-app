@@ -2,6 +2,7 @@
 
 // define colors here
 $textColor: #fff;
+$cardBgColor: #2a6568;
 
 // define all local css classes here
 :local {
@@ -16,13 +17,23 @@ $textColor: #fff;
 	.card {
 		max-width: 360px;
 		margin: 32px auto;
+		background: $cardBgColor;
 		
 		&__media {
 			height: 240px;
 		}
 
+		&__header {
+			color: $textColor;
+		}
+
 		&__description {
 			height: 100px;
+			color: $textColor;
+		}
+
+		&__linkButton {
+			color: $textColor;
 		}
 	}
 }

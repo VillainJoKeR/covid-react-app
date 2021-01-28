@@ -34,9 +34,11 @@ const Header = () => (
         </Box>
 
         <Box className={styles.headerItem}>
-          <Typography variant='h6'>
-            News
-          </Typography>
+          <Link className={styles.link} to='/contact'>
+            <Typography variant='h6'>
+              Contact
+            </Typography>
+          </Link>
         </Box>
       </Box>
     </Toolbar>

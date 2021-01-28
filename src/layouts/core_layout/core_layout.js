@@ -11,6 +11,11 @@ import styles from './core_layout.module.scss';
 // Define theme of the application
 // **********************************
 const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#086a72'
+    }
+  },
   typography: {
     // use system fonts
     fontFamily: [

@@ -1,0 +1,29 @@
+@import '../../styles/base.module.scss';
+
+// define colors here
+$textColor: #fff;
+$submitSuccessColor: #4caf50;
+
+// define all local css classes here
+:local {
+	.contactBox {
+
+	}
+
+	.formInputContainer {
+		&__formInput {
+		}
+	}
+
+	.submitButton {
+		width: 100%;
+		margin-top: 32px;
+
+		// modifiers
+		&_m_success {
+			background: $submitSuccessColor;
+		}
+	}
+}
+
+// define all global css classes here

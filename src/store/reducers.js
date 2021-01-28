@@ -4,7 +4,7 @@ import globalBaseReducer from '../modules/global_base'
 
 export const makeRootReducer = (asyncReducers) => {
   const rootReducer = combineReducers({
-    form : formReducer,
+    form: formReducer,
     globalBase: globalBaseReducer,
     ...asyncReducers
   })
