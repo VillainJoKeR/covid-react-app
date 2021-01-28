@@ -1,1 +1,14 @@
 
+@import '../../styles/base.module.scss';
+
+// define colors here
+
+// define all local css classes here
+:local {
+	.layoutContainer {
+		background: url('../../assets/images/home-bg.png') no-repeat center/cover;
+		height: 100vh;
+	}
+}
+
+// define all global css classes here

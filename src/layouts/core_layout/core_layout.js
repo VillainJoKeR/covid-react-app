@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline'
+import CssBaseline from '@material-ui/core/CssBaseline';
 import { createMuiTheme } from '@material-ui/core/styles';
+import Box from '@material-ui/core/Box';
+import Header from '../../components/header';
 import styles from './core_layout.module.scss';
 
 const theme = createMuiTheme({
@@ -33,8 +35,8 @@ export class CoreLayout extends React.PureComponent {
     return (
       <CssBaseline>
         <ThemeProvider theme={theme}>
-            <header>
-            </header>
+          <Box className={styles.layoutContainer}>
+            <Header />
 
             <main>
               {children}
@@ -43,6 +45,7 @@ export class CoreLayout extends React.PureComponent {
             {/* <footer>
               <b>Version</b> 1.1.0
             </footer> */}
+          </Box>
         </ThemeProvider>
       </CssBaseline>
     )

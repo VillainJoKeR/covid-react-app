@@ -1,0 +1,37 @@
+@import '../../styles/base.module.scss';
+
+// define colors here
+$white: #fff;
+
+// define all local css classes here
+:local {
+	.header {
+		background: transparent;
+		color: $white;
+	}
+
+	.homeIcon {
+		color: $white;
+	}
+
+	.headerListContainer {
+		flex: 1;
+		display: flex;
+	}
+
+	.headerItem {
+		margin-left: 32px;
+		color: $white;
+	}
+
+	.link {
+		text-decoration: none;
+		color: inherit;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+// define all global css classes here

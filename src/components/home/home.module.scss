@@ -5,12 +5,12 @@ $textColor: #fff;
 $buttonBorderColor: #2ea7a2;
 $buttonBgColor: #fff;
 
+//define other variables here
+$mainImageHeight: calc(100vh - 72px);
+
 // define all local css classes here
 :local {
 	.homeBox {
-		background: url('../../assets/images/home-bg.png') no-repeat center/cover;
-		height: 100vh;
-
 		&__gridContainer {
 			flex-direction: column-reverse;
 			
@@ -22,12 +22,17 @@ $buttonBgColor: #fff;
 
 	.coronaBox {
 		background: transparent url('../../assets/images/corona.png') no-repeat center/contain;
-		height: 360px;
-		width: 360px;
+		height: 240px;
+		width: 240px;
 		max-width: 560px;
 
+		@media(min-width: $xsBreakPoint) {
+			height: 320px;
+			width: 320px;
+		}
+
 		@media(min-width: $smBreakPoint) {
-			height: 100vh;
+			height: $mainImageHeight;
 			width: auto;
 			margin-top: 0;
 		}

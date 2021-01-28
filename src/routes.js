@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react'
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 /* 
 * Define all Lazy loaded components
@@ -22,7 +22,6 @@ const RouteWithSubRoutes = (route) => {
 
 export const RenderRoutes = ({ routes }) => {
 	return (
-		<Router>
 			<Suspense fallback={<div>Loading...</div>}>
 				<Switch>
 					{routes.map((route, i) => {
@@ -31,7 +30,6 @@ export const RenderRoutes = ({ routes }) => {
 					<Route component={() => <h1>Not Found!</h1>} />
 				</Switch>
 			</Suspense>
-		</Router>
 		)
 }
 
@@ -43,23 +41,10 @@ const ROUTES = [
 		component: Home
 	},
 	{
-		path: "/app",
-		key: "APP",
-		component: RenderRoutes,
-		routes: [
-			{
-				path: "/app",
-				key: "APP_ROOT",
-				exact: true,
-				component: () => <h1>App Index</h1>,
-			},
-			{
-				path: "/app/page",
-				key: "APP_PAGE",
-				exact: true,
-				component: () => <h1>App Page</h1>,
-			},
-		],
+		path: "/resources",
+		key: "APP_ROOT",
+		exact: true,
+		component: () => <h1>App Index</h1>,
 	},
 ]
 

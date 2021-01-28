@@ -1,6 +1,6 @@
 # Getting Started
 
-1. Install npm and NodeJS here [NodeJS] (https://nodejs.org/en/download/).
+1. Install npm and NodeJS here [NodeJS](https://nodejs.org/en/download/).
 
 2. Check below for the list of CLI commands available.
 
